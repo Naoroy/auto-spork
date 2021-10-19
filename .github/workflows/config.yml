@@ -17,5 +17,5 @@ jobs:
         with:
           eslint: true
           prettier: true
-  run-test:
+#  run-test:
 
