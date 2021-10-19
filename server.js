@@ -1,6 +1,24 @@
-const main = function () {
-  console.log('Hello Main')
-}
+const express = require('express')
+const app = express()
 
-if (!module.parent) main()
-else module.exports = main
+
+app.route('/')
+  .get(function(req, res) {
+    res.send({ msg: "Hello Spork" })
+  })
+app.route('/articles')
+  .get(function(req, res) {
+    res.send([
+      { 
+        title: '',
+        content: '',
+        date: new Date(),
+        author: '',
+        source: '',
+      }
+    ])
+  })
+
+
+if (!module.parent) app.listen(PORT)
+module.exports = app
