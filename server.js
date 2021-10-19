@@ -1,6 +1,6 @@
 const main = function () {
-  console.log("Hello Main")
+  console.log('Hello Main')
 }
 
-  if (!module.parent) main()
+if (!module.parent) main()
 else module.exports = main
